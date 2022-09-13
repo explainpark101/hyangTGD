@@ -1,3 +1,18 @@
+/* 트게더 로고 변경 */
+header .row>div:nth-child(1)>a {
+    display: block;
+    height: 50px;
+    background: url("https://github.com/explainpark101/hyangTGD/blob/f8e93354a4c89834f7e6940acd8642a4fa16c692/main_logo.png?raw=true") no-repeat;
+    content : unset;
+    position: relative;
+    top: 10px;
+}
+header .row>div:nth-child(1)>a img {
+    display: none; /*기본 로고 숨김*/
+}
 
 
-// 로고 아이콘 제공 : FLUvirus
+/* 트게더 상단바 */
+header #header-bar>.row{
+    border-top:5px solid #137138;
+}
