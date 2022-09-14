@@ -1,47 +1,42 @@
  
-/* 원본 CSS @import url("https://dandegimon.github.io/yanggether/yanggether_desktop.css");
- @font-face {
-     font-family: 'Dovemayo-Bold';
-     src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_four@1.0/Dovemayo-Bold.woff') format('woff');
-     font-weight: normal;
-     font-style: normal;
-}
- */
-/* 적용용 CSS @import url("https://explainpark101.github.io/Yangether/Yangether_winter.css");
- @font-face {
-     font-family: 'Dovemayo-Bold';
-     src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_four@1.0/Dovemayo-Bold.woff') format('woff');
-     font-weight: normal;
-     font-style: normal;
-}
+/* 적용용 CSS @import url("https://explainpark101.github.io/hyangTGD/Yangether_winter.css");
  */
 /* made by 박설명(explain_park) */
 /*내용 */
 :root{
     --gradient-first:#CCCCFF;
-    --gradient-end:#9999FF;
-    --first-color:#8080ff;
-    --border-highlight:#00ffff;
-    --border-highlight-dark:#00d0d0;
-    --fa-color:#d3ceb8;
-    --second-color:#15baff;
-    --third-color:#6fbaff;
-    --streamer-color:#75715e;
-    --search-color:#a6a291;
-    --article-highlight:#e7f8ff;
-    --fa-star-color:#ffa3a7;
-    --recommend-color:#4bcaff;
-    --forth-color:#08b6ff;
+    --gradient-end:#04523a;
+    --first-color:#057F5A;
+    --header-color:#6e1f11;
+    --header-text-color:white;
+    --border-highlight:hsl(162, 92%, 40%);
+    --border-highlight-dark:#cd5e43;
+    --fa-color:#054d1d;
+    --second-color:#367E18;
+    --third-color:#187e4b;
+    --streamer-color:#6e1f11;
+    --search-color:hsl(9, 73%, 28%);
+    --article-highlight:#fff5e7;
+    --fa-star-color:#e65151;
+    --recommend-color:#7eec23;
+    --forth-color:#361c03;
+    --streamer-name-bottom-border:#e2e2e2;
+    --new-article-background:#286090;
+    --new-article-border:#204d74;
+    --best-article-color:#efc839;
+    --footer-color:#b3b3b3;
+    --background-color:#deffdd;
 }
 
+
 @font-face {
-    font-family: 'Dovemayo-Bold';
-    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_four@1.0/Dovemayo-Bold.woff') format('woff');
+    font-family: 'ChosunKm';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-04@1.0/ChosunKm.woff') format('woff');
     font-weight: normal;
     font-style: normal;
 }
 html, body, table, div, p {
-    font-family: 'Dovemayo-Bold';
+    font-family: 'ChosunKm';
 }
 html, body{
     background: linear-gradient(var(--gradient-first),var(--gradient-end));
@@ -61,10 +56,12 @@ header .row > div:nth-child(1) > a {
     display: block;
     height: 50px;
     background: url("https://github.com/explainpark101/hyangTGD/blob/f8e93354a4c89834f7e6940acd8642a4fa16c692/main_logo.png?raw=true") no-repeat;
+    /* Logo By ExplainPark, Logo icon by FLUvirus */
     content: unset;
     position: relative;
     top: 10px;
    /* 애니메이션 */
+   transform-origin: 80px 50%;
     -webkit-animation: bounceInTop 4s;
     animation: bounceInTop 4s;
     -webkit-animation-iteration-count: infinite;
@@ -112,10 +109,16 @@ header .row > div:nth-child(1) > a img {
 }
 /* 로고밑 NAV bar */
 header #header-bar>.row {
-    border: 3px solid var(--first-color) !important;
-    background-color: var(--first-color);
-    border-radius: 20px;
+    border: 3px solid var(--header-color) !important;
+    background-color: var(--header-color);
+    color: var(--header-text-color);
+    border-radius: 5px;
 }
+/* 광고 글자 색상 */
+header #header-bar #header-top-notice, header #header-bar #header-top-notice a{
+    color:var(--header-text-color);
+}
+
 /* 검색폼 보더 */
 header #right-search-form>input[type='text'] {
     border: 2px solid #fff;
@@ -125,6 +128,11 @@ header #right-search-form>input[type='text'] {
 header #right-search-form>#right-search-btn {
     color: var(--search-color);
 }
+/* 헤더 글씨 색상 */
+header #header-bar a.dropdown-toggle{
+    color:var(--header-text-color);
+}
+
 /* 유저 프로필 이미지 원형화 */
 header #header-bar #header-menu-right #userDropdown img.profile-img {
     border-radius: 50%;
@@ -182,7 +190,7 @@ element.style {
 #board-info h1{
     padding-top: 18px;
     padding-bottom: 4px;
-    border-bottom: 2px dashed #e2e2e2;
+    border-bottom: 2px dashed var(--streamer-name-bottom-border);
 }
 #board-info h1>a{
     color:var(--streamer-color);
@@ -191,18 +199,18 @@ element.style {
     color: var(--streamer-color)cc;
 }
 #board-info #viewers-area .fa-user:before{
-    content: url('https://static-cdn.jtvnw.net/badges/v1/899a775f-91cf-4112-907b-b44bfb84725c/1');
+    content: url('https://static-cdn.jtvnw.net/badges/v1/a078bb77-4cce-49e0-9c5e-838b5caee09b/1');
     font-size: 16px;
     position: relative;
     top: 5px;
     cursor: text 
 }
 #board-info #viewers-area #viewers:before {
-    content: "";
+    content: "고얀놈 ";
     cursor: text;
 }
 #board-info #viewers-area #viewers:after {
-    content: "명 수감중!";
+    content: "명이 상소중이오";
     cursor: text;
 }
 /* 스트리머 이름 호버 색상 변경 */
@@ -242,7 +250,7 @@ element.style {
 #article-list #article-list-category>a::after {
     bottom: 0;
 }
-#article-list #article-list-category>a::before, #article-list #article-list-category>a::after {
+#article-list #article-list-category>a.nav-link::before, #article-list #article-list-category>a.nav-link::after {
     height: 2px;
     width: 100%;
     background: currentColor;
@@ -252,22 +260,27 @@ element.style {
     transform: scaleX(0);
     transition: 0.3s;
 }
-#article-list #article-list-category>a:hover::before, #article-list #article-list-category>a:hover::after {
+#article-list #article-list-category>a.nav-link:hover::before, #article-list #article-list-category>a.nav-link:hover::after {
     transform: scaleX(1);
 }
 /*메인메뉴*/
 #article-list{
-    padding:0 1em 2em;
+    padding:0 0em 2em;
 }
 #article-list #article-list-category{
     border-top: none;
     background: #fff;
-    border: 2px dashed #f0ebd6;
     border-radius: 20px;
     margin-bottom: 10px;
 }
-#article-list #article-list-category > a.active, #article-list #article-list-category>a:hover,#article-list #article-list-category>a{
+
+#article-list #article-list-category.can-float>a.active, #article-list #article-list-category.can-float>a:hover,#article-list #article-list-category.can-float>a {
     background: none;
+    cursor:pointer;
+}
+#article-list #article-list-category.can-float{
+    border:1px solid var(--border-highlight);
+    border-radius: 5px;
 }
 .fa-home{
     color: var(--fa-color);
@@ -350,7 +363,7 @@ span.a-badge i.fa.fa-star{
     -ms-animation: animationFrames ease-in-out 2s infinite;
 }
 .fa-heart:before {
-    content: url(https://archive.ph/nx1Df/5bc21358f013f7a65906c4b4d107d0bdc0f6487a.gif);
+    /* content: url(https://archive.ph/nx1Df/5bc21358f013f7a65906c4b4d107d0bdc0f6487a.gif); */
     position: relative;
     top: -2px;
     display: inline-block;
@@ -374,10 +387,11 @@ span.a-badge i.fa.fa-star{
 #article-list>.article-list-row>.item>.list-title>small.comment-count{
     color: var(--forth-color);
 }
+
 /* 글 안*/
 #article-content-wrapper>.header{
-    border-top: #63b6ff;
-    background: #ddfffb;
+    border-top: var(--forth-color);
+    background: var(--background-color);
 }
 #article-reply-area > .header h5{
     color: var(--streamer-color);
@@ -422,8 +436,8 @@ span.a-badge i.fa.fa-star{
 }
 #article-list #article-list-menu>.btn.write:hover {
     color: #fff;
-    background-color: #286090;
-    border-color: #204d74;
+    background-color: var(--new-article-background);
+    border-color: var(--new-article-border);
 }
 #article-list #article-list-menu>.btn.cog{
     border-radius: 10px;
@@ -434,14 +448,19 @@ span.a-badge i.fa.fa-star{
 /* 인기글 버튼 색상 */
 #article-list #article-list-menu>.btn.best:hover {
     border-radius: 10px;
-    background-color: #efc839;
+    background-color: var(--best-article-color);
     color:#fff;
-    border-color: #efc839;
+    border-color: var(--best-article-color);
 }
 /* footer */
 footer,a{
-    color: #0e1a3f;
+    color: var(--footer-color);
 }
+footer>.container>span::after{
+    white-space: pre;
+    content:"\a\a\a CSS by 박설명\aLogo Icon by FLUvirus\amoveTop image by DoranKiwi";
+}
+
 #article-list>.article-list-row {
     border-right: none;
 }
@@ -461,8 +480,9 @@ footer,a{
 #movetotop {
     display: inline-block;
     opacity:1;
-    background: url("https://archive.ph/nx1Df/1ec4ccc308279a2a5604092efc1978ee06ec52e0.png");
-    width: 150px;
+    background: url("https://cdn.discordapp.com/attachments/1015627605812187139/1019249780259553362/sss.png");
+    /* 이미지 출처 : DoranKiwi */
+    width: 105px;
     height: 167px;
     background-size: contain;
 }
