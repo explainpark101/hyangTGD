@@ -324,6 +324,7 @@ element.style {
   content: "";
   position: absolute;
   left: 0px;
+  transform-origin: 0%;
   transform: scaleX(0);
   transition: 0.3s;
 }
