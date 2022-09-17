@@ -1,5 +1,6 @@
 
 function ChangeEmotes(){
+    console.log("started");
     let emoticons = {
         '100coin' : "https://cdn.discordapp.com/emojis/963984293485510676.webp" 
         ,Bow : "https://cdn.discordapp.com/emojis/963983899992666162.webp" 
