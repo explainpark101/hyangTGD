@@ -53,7 +53,9 @@ html, body{
 body {
   background: transparent;
   height: auto;
-  background-image: url('https://explainpark101.github.io/Yangether/snow1.png'),url('https://explainpark101.github.io/Yangether/snow2.png'),url('https://explainpark101.github.io/Yangether/snow3.png');
+  background-image: url('https://explainpark101.github.io/hyangTGD/snow1.png'),
+                    url('https://explainpark101.github.io/hyangTGD/snow2.png'),
+                    url('https://explainpark101.github.io/hyangTGD/snow3.png');
   -webkit-animation: snow 10s linear infinite;
   -moz-animation: snow 10s linear infinite;
   -ms-animation: snow 10s linear infinite;
@@ -63,7 +65,7 @@ body {
 header .row > div:nth-child(1) > a {
   display: block;
   height: 50px;
-  background: url("https://github.com/explainpark101/hyangTGD/blob/f8e93354a4c89834f7e6940acd8642a4fa16c692/main_logo.png?raw=true") no-repeat;
+  background: url("https://explainpark101.github.io/hyangTGD/hyangTGD/main_logo.png") no-repeat;
   /* Logo By ExplainPark, Logo icon by FLUvirus */
   content: unset;
   position: relative;
