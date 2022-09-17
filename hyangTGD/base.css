@@ -53,9 +53,9 @@ html, body{
 body {
   background: transparent;
   height: auto;
-  background-image: url('https://explainpark101.github.io/hyangTGD/snow1.png'),
-                    url('https://explainpark101.github.io/hyangTGD/snow2.png'),
-                    url('https://explainpark101.github.io/hyangTGD/snow3.png');
+  background-image: url('https://explainpark101.github.io/hyangTGD/snow/snow1.png'),
+                    url('https://explainpark101.github.io/hyangTGD/snow/snow2.png'),
+                    url('https://explainpark101.github.io/hyangTGD/snow/snow3.png');
   -webkit-animation: snow 10s linear infinite;
   -moz-animation: snow 10s linear infinite;
   -ms-animation: snow 10s linear infinite;
